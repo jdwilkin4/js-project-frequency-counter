@@ -1,0 +1,30 @@
+{
+  "name": "js-project-frequency-counter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run open-browser && next dev",
+    "open-browser": "open http://localhost:3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "scrape:rpgGame": "node scripts/scrape-final-solution.js https://raw.githubusercontent.com/freeCodeCamp/freeCodeCamp/main/curriculum/challenges/english/15-javascript-algorithms-and-data-structures-22/learn-basic-javascript-by-building-a-role-playing-game/62aa2ba9cd881355a6f0a5a8.md data/rpg-game.js"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "puppeteer": "^21.7.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}

@@ -38,7 +38,9 @@ export const Table = ({ name, filePath }: TableProps) => {
 
             return (
               <tr key={concept}>
-                <td className="border border-slate-300 p-4">{concept}</td>
+                <td className="border border-slate-300 p-4">
+                  {concept.toLowerCase()}
+                </td>
                 <td className="border border-slate-300 p-4">{currentCount}</td>
               </tr>
             );

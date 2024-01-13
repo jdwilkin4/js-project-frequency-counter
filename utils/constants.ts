@@ -208,7 +208,7 @@ export const LIST_OF_CONCEPTS_TAUGHT: Record<string, string | RegExp> = {
     "Declaring a variable without initializing it",
   "Initializing with a value (string, number, etc.)":
     "Initializing with a value (string, number, etc.)",
-  let: "let",
+  let: /let\s+\w+\s*(=\s*\w+\s*)?;/g,
   var: "var",
   boolean: "boolean",
   "location.reload()": "location.reload()",

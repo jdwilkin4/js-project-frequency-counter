@@ -8,6 +8,14 @@ type TableProps = {
 
 export const Table = ({ name, filePath }: TableProps) => {
   const map = getProjectConcepts({ filePath: filePath || "" });
+
+  // filter out concepts with 0 frequency count in map
+  for (const [key, value] of map.entries()) {
+    if (value === 0) {
+      map.delete(key);
+    }
+  }
+
   const listOfConcepts = Array.from(map.keys());
   const frequencyCountsArray = Array.from(map.values());
 
@@ -23,19 +31,15 @@ export const Table = ({ name, filePath }: TableProps) => {
           </tr>
         </thead>
         <tbody className="text-xl">
-          {frequencyCountsArray
-            .filter((count) => count > 0)
-            .map((currentCount: number, index: number) => {
-              const concept = listOfConcepts[index];
-              return (
-                <tr key={concept}>
-                  <td className="border border-slate-300 p-4">{concept}</td>
-                  <td className="border border-slate-300 p-4">
-                    {currentCount}
-                  </td>
-                </tr>
-              );
-            })}
+          {frequencyCountsArray.map((currentCount: number, index: number) => {
+            const concept = listOfConcepts[index];
+            return (
+              <tr key={concept}>
+                <td className="border border-slate-300 p-4">{concept}</td>
+                <td className="border border-slate-300 p-4">{currentCount}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
       <HomeLink />

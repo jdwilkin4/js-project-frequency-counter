@@ -7,7 +7,7 @@ type TableProps = {
 };
 
 export const Table = ({ name, filePath }: TableProps) => {
-  const map = getProjectConcepts({ filePath: filePath || "" });
+  let map = getProjectConcepts({ filePath: filePath || "" });
 
   // filter out concepts with 0 frequency count in map
   for (const [key, value] of map.entries()) {
@@ -16,8 +16,10 @@ export const Table = ({ name, filePath }: TableProps) => {
     }
   }
 
-  const listOfConcepts = Array.from(map.keys());
-  const frequencyCountsArray = Array.from(map.values());
+  // sort concepts in alphabetical order
+  let projectConcepts = [...map.entries()].sort((a, b) =>
+    a[0].localeCompare(b[0])
+  );
 
   return (
     <>
@@ -31,8 +33,9 @@ export const Table = ({ name, filePath }: TableProps) => {
           </tr>
         </thead>
         <tbody className="text-xl">
-          {frequencyCountsArray.map((currentCount: number, index: number) => {
-            const concept = listOfConcepts[index];
+          {projectConcepts.map((project) => {
+            const [concept, currentCount] = project;
+
             return (
               <tr key={concept}>
                 <td className="border border-slate-300 p-4">{concept}</td>

@@ -4,7 +4,7 @@ type CardProps = {
 };
 export const Card = ({ title, tags }: CardProps) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden text-black bg-gray-100 hover:bg-green-700 hover:text-gray-200">
+    <div className="max-w-sm h-60 rounded overflow-hidden text-black bg-gray-100 hover:bg-green-700 hover:text-gray-200">
       <div className="px-6 py-4">
         <h2 className="font-bold text-xl mb-2">{title}</h2>
       </div>

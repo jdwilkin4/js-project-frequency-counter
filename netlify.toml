@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/[slug]/page"
+  to = "/[slug]/page"
+  status = 200

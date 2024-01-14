@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className="flex flex-wrap justify-center align-center gap-8">
         {LIST_OF_PROJECTS.map(({ title, tags, route }) => (
-          <Link href="/[slug]/page" key={title} as={`/${route || ""}/page`}>
+          <Link href="/[slug]/page" key={title} as={route ? `/${route}` : "/"}>
             <Card key={title} title={title} tags={tags || []} />
           </Link>
         ))}

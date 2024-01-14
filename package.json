@@ -11,7 +11,7 @@
     "scrape:rpgGame": "node scripts/scrape-final-solution.js https://raw.githubusercontent.com/freeCodeCamp/freeCodeCamp/main/curriculum/challenges/english/15-javascript-algorithms-and-data-structures-22/learn-basic-javascript-by-building-a-role-playing-game/62aa2ba9cd881355a6f0a5a8.md data/rpg-game.js"
   },
   "dependencies": {
-    "next": "14.0.4",
+    "next": "13.3.0",
     "puppeteer": "^21.7.0",
     "react": "^18",
     "react-dom": "^18"

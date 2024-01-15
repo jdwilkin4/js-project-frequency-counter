@@ -7,6 +7,15 @@ type TableProps = {
 };
 
 export const Table = ({ name, filePath }: TableProps) => {
+  if (!filePath) {
+    return (
+      <>
+        <p className="text-xl text-center">No concepts found</p>
+        <HomeLink />
+      </>
+    );
+  }
+
   let map = getProjectConcepts({ filePath: filePath || "" });
 
   // filter out concepts with 0 frequency count in map

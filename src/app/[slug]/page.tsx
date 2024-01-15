@@ -3,8 +3,9 @@ import { LIST_OF_PROJECTS } from "../../../utils/constants";
 import { HomeLink } from "@/components/HomeLink";
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const projectRoutes = LIST_OF_PROJECTS.map(({ route }) => route);
-  const projectIndex = projectRoutes.indexOf(`${params.slug}`);
+  const projectIndex = LIST_OF_PROJECTS.findIndex(
+    ({ route }) => route === params.slug
+  );
 
   if (projectIndex === -1) {
     return (

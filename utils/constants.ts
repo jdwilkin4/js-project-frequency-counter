@@ -241,6 +241,7 @@ export const LIST_OF_PROJECTS: Project[] = [
     title: "Learn Form Validation by Building a Calorie Counter",
     id: "practice-project-2",
     tags: ["regex", "event listeners", "DOM manipulation", "form validation"],
+    route: "calorie-counter",
   },
   {
     title:
@@ -252,74 +253,88 @@ export const LIST_OF_PROJECTS: Project[] = [
       "array methods",
       "DOM manipulation",
     ],
+    route: "music-playlist",
   },
   {
     title: "Learn the Date Object By Building a Date Formatter",
     id: "practice-project-4",
     tags: ["date object", "switch statement"],
+    route: "date-formatter",
   },
 
   {
     title: "Learn Modern JavaScript Methods by Building Football Team Cards",
     id: "practice-project-5",
     tags: ["Object.freeze()", "map()", "default parameters"],
+    route: "football-team-cards",
   },
   {
     title: "Learn localStorage by building a TODO List App",
     id: "practice-project-6",
     tags: ["localStorage", "DOM manipulation"],
+    route: "todo-list",
   },
   {
     title: "Learn Recursion by Building a Decimal to Binary Converter",
     id: "practice-project-7",
     tags: ["recursion"],
+    route: "decimal-to-binary",
   },
   {
     title: "Learn Basic Algorithmic Thinking by Building a Number Sorter",
     id: "practice-project-8",
     tags: ["sorting algorithms"],
+    route: "number-sorter",
   },
   {
     title: "Learn Advanced Array Methods by Building a Statistics Calculator",
     id: "practice-project-9",
     tags: ["map()", "reduce()", "filter()"],
+    route: "statistics-calculator",
   },
   {
     title: "Learn Functional Programming by Building a Spreadsheet",
     id: "practice-project-10",
     tags: ["functional programming"],
+    route: "spreadsheet",
   },
   {
     title: "Learn Regular Expressions by Building a Spam Filter",
     id: "practice-project-11",
     tags: ["regex"],
+    route: "spam-filter",
   },
 
   {
     title: "Learn Basic OOP Concepts by Building a Shopping Cart",
     id: "practice-project-12",
     tags: ["classes", "constructor", "this", "new keyword"],
+    route: "shopping-cart",
   },
   {
     title: "Learn Intermediate OOP by Building a Platformer Game",
     id: "practice-project-13",
     tags: ["classes", "constructor", "this", "new keyword"],
+    route: "platformer-game",
   },
   {
     title: "Learn Intermediate Algorithmic Thinking by Building a Dice Game",
     id: "practice-project-14",
     tags: ["algorithms"],
+    route: "dice-game",
   },
 
   {
     title: "Learn Fetch and Promises by Building an fCC Authors Page",
     id: "practice-project-15",
     tags: ["fetch", "promises"],
+    route: "authors-page",
   },
   {
     title:
       "Learn Asynchronous Programming by Building an fCC Forum Leaderboard",
     id: "practice-project-16",
     tags: ["async", "await"],
+    route: "forum-leaderboard",
   },
 ];

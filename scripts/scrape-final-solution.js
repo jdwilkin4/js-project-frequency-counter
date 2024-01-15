@@ -49,14 +49,14 @@ const urlArgument = process.argv[2];
 const fileNameArgument = process.argv[3];
 
 if (!urlArgument) {
-  console.log(
+  console.error(
     "Error: Please provide a URL you wish to scrape as a command-line argument."
   );
   process.exit(1);
 }
 
 if (!fileNameArgument) {
-  console.log(
+  console.error(
     "Error: Please provide a file name you wish to save to as a command-line argument."
   );
   process.exit(1);
